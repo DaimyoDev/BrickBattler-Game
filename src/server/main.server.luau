@@ -17,8 +17,7 @@ local function main(type, time)
     chosenMap:Clone().Parent = game.Workspace
     teleportPlayers(chosenMap)
     for countdown = time, 0, -1 do
-        task.wait(0.2)
-        print(countdown)
+        task.wait(1)
         UpdateRoundTimeText:FireAllClients(countdown)
     end
     game.Workspace:FindFirstChild(chosenMap.Name):Destroy()
@@ -26,5 +25,5 @@ end
 
 
 while true do
-    main("round", 20)
+    main("round", 240)
 end
